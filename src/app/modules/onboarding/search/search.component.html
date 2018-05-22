@@ -1,0 +1,27 @@
+
+<div class="inner-wrap">
+  <div *ngIf="searchForm" class="title">
+
+    <form name="searchForm" novalidate
+          [formGroup]="searchForm"
+          (ngSubmit)="onSubmit()">
+
+      <div class="form-group" >
+        <input type="text" id="title"
+               [formControl]="searchForm.controls['title']"
+               placeholder="Title"
+        />
+      </div>
+
+      <div class="form-group">
+        <button class="btn" [disabled]="searchForm.invalid">Submit</button>
+      </div>
+    </form>
+
+  </div>
+
+  <div *ngIf="searchedMovie" class="content">
+    <app-details [movie]="searchedMovie"></app-details>
+  </div>
+</div>
+
