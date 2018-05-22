@@ -29,14 +29,4 @@ export class HttpClientService {
 
     return this.http.get(url, {params});
   }
-
-  extractData(res) {
-
-    return res.json();
-
-  }
-
-  handleError(error) {
-    return error;
-  }
 }

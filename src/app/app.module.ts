@@ -6,10 +6,11 @@ import {PreloadAllModules, RouterModule, Routes} from "@angular/router";
 import {HttpClientService} from "./shared/services/http-client.service";
 import {SearchService} from "./modules/onboarding/services/search.service";
 import { HttpClientModule } from '@angular/common/http';
+import {APP_ROUTES} from "./shared/constants/app-routes";
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent, pathMatch: 'full'},
-  {path: 'search', loadChildren: './modules/onboarding/onboarding.module#OnboardingModule'}
+  {path: APP_ROUTES.search, loadChildren: './modules/onboarding/onboarding.module#OnboardingModule'}
 ];
 
 @NgModule({

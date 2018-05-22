@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClientService} from "./shared/services/http-client.service";
+import {APP_ROUTES} from "./shared/constants/app-routes";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.http.getRouter().navigate(['search']);
+    this.http.getRouter().navigate([APP_ROUTES.search]);
   }
 
 }
