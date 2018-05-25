@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {PreloadAllModules, RouterModule, Routes} from "@angular/router";
@@ -26,6 +26,7 @@ const appRoutes: Routes = [
     HttpClientService,
     SearchService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
